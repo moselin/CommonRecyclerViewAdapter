@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseArray;
 
 import com.mosl.commonrecyclerview.adapter.BaseViewHolder;
 import com.mosl.commonrecyclerview.adapter.CommonRecycleViewAdapter;
@@ -71,11 +72,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     @Override
-    public Map<Integer, Class<? extends BaseViewHolder>> getViewHolder()
+    public SparseArray<Class<? extends BaseViewHolder>> getViewHolder()
     {
-        @SuppressLint("UseSparseArrays") Map<Integer, Class<? extends BaseViewHolder>> map = new HashMap<>();
-        map.put(R.layout.main_item, WechatViewHolder.class);
-        map.put(R.layout.test_item, TestViewHolder.class);
-        return map;
+        SparseArray<Class<? extends BaseViewHolder>> array = new SparseArray<>();
+        array.put(R.layout.main_item, WechatViewHolder.class);
+        array.put(R.layout.test_item, TestViewHolder.class);
+        return array;
     }
 }

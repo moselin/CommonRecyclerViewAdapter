@@ -2,6 +2,7 @@ package com.mosl.commonrecyclerview.adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -69,6 +70,6 @@ public class CommonRecycleViewAdapter extends RecyclerView.Adapter<RecyclerView.
          *
          * @return map, integer is layoutId,class is what extents BaseViewHolder
          */
-        Map<Integer,Class<? extends BaseViewHolder>> getViewHolder();
+        SparseArray<Class<? extends BaseViewHolder>> getViewHolder();
     }
 }
